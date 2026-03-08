@@ -1,0 +1,644 @@
+## 3.9.5
+
+- Added option to disable the automatic warp to the Roundtable after defeating a boss in single boss selection mode.
+
+## 3.9.4
+
+- When launched via ME3, the mod now forces the use of a separate savefile, with Sandbox and Progression having their own savefile. The first time it's launched, it will create a copy of the default savefile and use the copy from that point on. Seamless Co-op still uses its own savefile and should not be affected.
+
+- ME2 support has been deprecated. You can still use it if you wish, but the install instructions will not mention it and no support will be provided for its usage.
+
+## 3.9.3
+
+- ME3 profile now loads Seamless Co-op automatically if present.
+
+## 3.9.2
+
+- Updated for ER 1.16.1 compatibility.
+
+- Normalized status effect resistances for the target dummy at the Roundtable Hold.
+
+## 3.9.1
+
+- Fixed bug with "phase 2 start" bosses not working when used in custom Boss Rush.
+
+- Fixed incorrect description for Mohg's Great Rune.
+
+- Fixed some minor bugs with Kale's "Obtain all items" options.
+
+## 3.9
+
+- Added difficulty settings: Hard and Very Hard. These reduce the player's HP to 0.7x and 0.5x respectively, and attack power/stance damage to 0.8x and 0.65x respectively. These can be found in the new Options submenu at Gideon.
+
+- Moved most existing options to the new Options submenu to reduce clutter.
+
+- Reduced the attack power increase from Mohg's Great Rune from 10% to 7%.
+
+## 3.8.2
+
+- Added toggle to enable/disable rune loss on death to Gideon's menu.
+
+- Fixed incorrect initial weather for Placidusax fight.
+
+- Edited Jar-Bairn's text to clarify the infinite HP option also nullifies status effects.
+
+## 3.8.1
+
+- Fixed defeat events for some overworld bosses.
+
+## 3.8
+
+- Added ME3 support. If ME3 is installed (version 0.6.0 or newer required), opening the included .me3 file will automatically launch the game with the mod. Using the mod via ME2 is still supported as always.
+
+- Added the ability to level up at Rennala (since a strangely large amount of people were confused about not being able to level up there, for some reason).
+
+- Modified the Memory of Grace item to warp you to the Roundtable Hold instead, and without losing any runes. This can be useful to warp in situations where you can't use the map (such as during boss fights).
+
+- Modified the Stone Platform event script to prevent unwanted flag changes if an existing non-Boss Arena character is accidentally loaded.
+
+- Fixed error when trying to use the Enemy Onslaught mode in Enemy Randomizer.
+
+- Fixed issue where the defeat condition was incorrect for overworld single bosses being replaced by duo/trio bosses with Enemy Randomizer (including Enemy Onslaught). For most bosses, the game should now correctly require defeating all bosses in the group and not just one.
+
+- Added an optional modifier to improve compatibility with Enemy Randomizer for Gideon and Rykard's fights. It disables Gideon's moveset randomization and the ability to skip to phase 2 for Rykard, which is why it's not integrated into the main mod by default (note that the phase skip feature is generally not compatible with Enemy Randomizer anyway).
+
+## 3.7.2
+
+- Fixed warp prompt after boss defeat.
+
+## 3.7.1
+
+- Added the option to buff Rennala's and Rykard's HP when skipping phase 1.
+
+- Added the option to initialize Boss Arena to all Roundtable NPCs.
+
+- Added a failsafe to force a warp back to the Roundtable if the player dies after defeating a boss, preventing some bugs that would happen otherwise.
+
+- Improved logic of the "loaded an existing character" checks.
+
+- Prevented certain changes from being applied to characters before the mod is initialized.
+
+## 3.7
+
+- Modified the "Random endless" mode to "Random sequential", which keeps track of bosses defeated during the sequence and avoids selecting them again. Like Boss Rush, this sequence can be resumed (although you'll probably get a different boss than the one you paused at), but selecting any other mode will erase progress. If you have added custom exclusions to a random mode, this will still work, but since the end condition will never be fulfilled, it will instead rely on a 30 second timeout until it gives up trying to find another undefeated random boss.
+
+- Boss Arena now needs to be initialized manually (by talking to Gideon) on each character the first time they're loaded with the mod installed. This will prevent issues where accidentally loading an existing character would apply various permanent changes to it.
+
+- Added a warning when a character previously used in Progression mode is loaded in Sandbox mode and viceversa.
+
+- Added a warning when a character that has not been initialized in Boss Arena is loaded, if the location is not the Roundtable.
+
+- Improved logic when reaching the end of boss sequences.
+
+- Modified text to make it clearer whether certain toggles are on or off.
+
+- Music now correctly stops after a boss is defeated.
+
+## 3.6.1
+
+- Fixed bug where most inventory items would always be removed after defeating a boss. You can use the new functions at Kale to get items in bulk to quickly recover if you were affected.
+
+## 3.6
+
+- Added the ability to start fights in phase 2 for select bosses, with the option to restore them to full HP or keep their normal HP. These are all treated as separate boss selections internally, so they can also be used in customized Boss Rush (but they are not included in the random pools). Note that some phase 2 triggers are a bit random and may not happen immediately.
+
+- Added options to Kalé's shop to receive all items in a specific category at once. Note that there is a global inventory limit and it can be reached if you use every single option. Also note that items that use containers (such as Fire Pots) are not awarded and must be purchased/crafted specifically.
+
+- Added an option to the same Kalé submenu to remove most purchasable items from your inventory. This can be useful if you happen to reach the inventory limit and want to start over.
+
+- Added a toggle to Gideon's menu that lets you choose whether to allow warps to skip boss death dialogue, or always play it in full before the defeat banner appears.
+
+- Bosses will now only trigger their defeat logic if they have been selected in the first place. This should prevent some reported issues with certain bosses in nearby maps being auto-killed by scripts and triggering warps when fighting a completely different boss.
+
+- Container items (Cracked Pots, etc) are now given automatically on character creation or first visit to the Roundtable Hold.
+
+- Igon's Furled Finger is now given automatically on character creation or first visit to the Roundtable Hold, if the DLC is installed.
+
+- Fixed bug with Gideon boss fight not working if the "Reset first encounter cutscenes" option was used.
+
+- Moved the spawn point for the Placidusax fight inside the arena.
+
+- Increased number of custom Boss Rush slots to 5.
+
+- Added an optional modifier regulation.bin to restore the vanilla NG+ stats (removing the buffs to earlier enemies), as well as one that combines this with the vanilla Scadutree Blessing mechanics.
+
+- Removed the optional modifiers for restoring level up costs, as the amount of modifiers are combinations would be unviable to maintain otherwise. This is now provided as a .CSV file instead for merging with Smithbox (guide is linked in the included help file).
+
+- The title screen now indicates if you're playing on Sandbox or Progression mode.
+
+- Updated French translation (credit to KaruMiraii).
+
+## 3.5.3
+
+- Fixed compatibility with Enemy Randomizer.
+
+## 3.5.2
+
+- Modified the logic for setting the player respawn point, to try and prevent cases of bricked save slots when the game crashes after defeating a boss.
+
+- Moved multiple Stake of Marika respawn points closer to the boss fog gates.
+
+- Dying to Dragonlord Placidusax will now respawn you inside the arena, instead of having to lie down at the grave and trigger the cutscene.
+
+## 3.5.1
+
+- The "Reset first encounter cutscenes" option now also removes the fog gate for Fire Giant and Commander Gaius.
+
+## 3.5
+
+- Added compatibility with thefifthmatt's Enemy Randomizer (https://www.nexusmods.com/eldenring/mods/428).
+
+- IMPORTANT: Item Randomizer is NOT compatible and will result in errors. Therefore, make sure to uncheck the Item Randomizer tab in the randomizer mod.
+
+- Adjusted the timing of warps after defeating Evergaol bosses to prevent not obtaining the rune rewards
+
+- Made the "Resume Boss Rush" / "Re-select last boss" options a different color to stand out.
+
+- Changed the rune rewards for Dryleaf Dane back to 0 as the value is not scaled by Enemy Randomizer.
+
+# 3.4.3
+
+- Reverted changes that may be causing freezes and bricked save slots when dying to a boss at the same time as the boss is defeated.
+
+## 3.4.2
+
+- Added boss HP bar and music to Crucible Knight Devonia, and increased their HP by 25%.
+
+- Added a mitigation for a rare issue that can result in a bricked save slot when defeating a boss and dying at the same time.
+
+## 3.4.1
+
+- The Lantern now stays enabled through loading screens and after quitting the game and reloading.
+
+- Scadutree Fragments and Revered Spirit Ashes are now only awarded if the DLC is installed.
+
+- Removed a few more walls blocking the way back from the boss fog.
+
+## 3.4
+
+- Added a dummy target enemy to the Roundtable Hold for damage testing. The combat restrictions at the Roundtable are now removed and all other NPCs are invincible.
+
+- When playing Boss Rush and Random Endless modes, a prompt will now appear after defeating a boss that lets you choose whether to continue to the next boss or go to the Roundtable. The appearance of these prompts can be toggled individually for each mode. When disabled, you will automatically be warped to the next boss as usual.
+
+- Small known issue: when you choose the Roundtable option after defeating the last boss in a Boss Rush sequence, the "Resume Boss Rush" option will still appear at Gideon's menu, even though it does nothing. This will probably not get fixed as it doesn't really affect anything and it would be quite complex to fix.
+
+- Added an option at Morgott's corpse to toggle the DLC completion NG+ scaling multiplier on or off. This is the stat multiplier that is normally triggered by defeating the final boss of the DLC and going into NG+, and is meant to compensate for the player's Scadutree upgrades. This option will only take effect when in NG+ and using the "Restore Scadutree Blessing mechanics" modifier. In the default version of the mod, this multiplier is nullified along with all Scadutree-related buffs.
+
+- The "Random: All bosses" option now excludes DLC bosses if the DLC is not installed, preventing potential bricked saves.
+
+- Fixed time of day switching abruptly around the Limgrave Tree Sentinel area.
+
+- Time of day is now set to late night for the Radahn fight, as in the normal game.
+
+- Removed confirmation prompts for using Golden Seeds, Sacred Tears, Scadutree Fragments and Revered Spirit Ash.
+
+- A full set of Scadutree Fragments/Revered Spirit Ash is now given automatically to new and existing characters if the DLC is installed. The Shadow Realm Blessing submenu at the Roundtable Site of Grace now displays in all cases if the DLC is installed, without needing a separate script file. However, you still need to use the "Restore Scadutree Blessing mechanics" modifier regulation.bin for the buffs to take effect and to restore the vanilla boss stats. A note has been added to the submenu clarifying this.
+
+- The option to re-fight the last boss selected will now be hidden if a Boss Rush is currently resumable, to avoid confusion.
+
+- Dying during Boss Rush will now always respawn you before the boss as intended, even if you have selected "Respawn at Roundtable Hold" in the options. The only exception is if there's a Stake of Marika in range and you choose to respawn at the last Grace visited.
+
+- Added a confirmation prompt to Morgott's NG+ trigger.
+
+- Adjusted some spawn points.
+
+- Dryleaf Dane now drops 50,000 runes instead of 0.
+
+- The "May the Best Win" gesture is now only awarded once.
+
+- Various menu improvements.
+
+## 3.3.1
+
+- Fixed Dragonkin Soldier of Nokstella (again).
+
+## 3.3
+
+- All NPC co-op summon signs (that I know of) should now be available to use.
+
+- Adjusted warp spawn points to make NPC summon signs more visible.
+
+- Fixed Leda returning home immediately after being summoned for Rellana.
+
+- Finger Severer is now awarded automatically to new characters and existing characters who don't have it, so you can dismiss NPC summons.
+
+- Rune loss on death is now disabled (unless you die to Deathblight).
+
+- Prevented cutscene from playing on the first visit to the Stranded Graveyard.
+
+- Reverted Edgar to his normal appearance and equipment.
+
+## 3.2
+
+- Added option to the Flasks menu at the Site of Grace to instantly max out flask amount and strength.
+
+## 3.1.1
+
+- Selecting Radagon/Elden Beast will now spawn you before the wall of light, instead of directly in the boss arena. This allows the intro cutscene to play.
+
+- Fixed potential spawn point bug with Black Knight Garrew.
+
+- Tweaked Rennala's event script to try and prevent issues with the fight not ending (probably caused by using existing characters from vanilla).
+
+## 3.1
+
+- Added a new "Shops" entry to the Site of Grace menu, which is a copy of the Twin Maiden Husks menu, except it doesn't require any Bell Bearings. While the shops inside are all empty, their purpose is to make it easier to merge mods such as Clever's Moveset Modpack, which add weapons to merchant shops around the game. This way, those shops can be accessed directly.
+
+- Fixed Crucible Knight Devonia not triggering the defeat event under certain circumstances.
+
+- Made boss selection menus fancier with colors.
+
+- Fixed potential "void spawn" bugs under specific conditions.
+
+- Reordered Site of Grace options to make more sense.
+
+- Enabled DLC map toggle in the map screen.
+
+## 3.0.2
+
+- Fixed Jar-Bairn's dialogue not triggering.
+
+## 3.0.1
+
+- Fixed flags for Misbegotten Warrior + Crucible Knight spawn.
+
+- Fixed a potential bug with the NG+ trigger.
+
+- Added custom "save corrupted" warnings to the French version (still in English).
+
+## 3.0
+
+- Added internal support for all bosses to Boss Rush. The built-in options still only include remembrance and DLC main bosses, but you can configure your own Boss Rush sequences by following this guide, which has been simplified thanks a complete overhaul of the code: https://docs.google.com/document/d/1uOUF6rMRcfPdUAOSptxZWAWZFznEp3rSVxgKxCUOAM8
+
+- The mod now recognizes whether you have the DLC installed or not, and will not show or trigger DLC bosses or items if the DLC is not detected. Thanks to LordExelot for his help with implementing this.
+
+- Due to this change, the DLC and Legacy versions of Sandbox Mode have been integrated into a single one.
+
+- Added an option to Gideon's menu to resume a Boss Rush in progress, as long as no other boss selection is made via any means.
+
+- Added a toggle for Endless mode to the random boss selection option. This will take you to another random boss (within the selected pool) directly after the current one is defeated.
+
+- Added the ability to add exclusions to the randomized boss pools. This is also explained in the link above.
+
+- Changed Hewg's animation so that he stops hammering.
+
+- Modified the "save is corrupted" text to add some indications on what the user should do (shamelessly copied from thefifthmatt's randomizer mod).
+
+- Added info messages after boss defeat.
+
+- Various menu improvements.
+
+## 2.8
+
+- Added a Boss Rush option to the boss selection menu. Boss Rush will warp you from one boss location to the next in sequence after defeating each boss. At the moment there are 3 presets available, plus the option to create your own sequences by modifying a file (https://docs.google.com/document/d/1uOUF6rMRcfPdUAOSptxZWAWZFznEp3rSVxgKxCUOAM8). For now only remembrance and DLC main bosses are supported, but more options may be added in the future.
+
+- Note that manually warping to the Roundtable and selecting any boss via any method (single selection, rematch, random, or another boss rush) will make you lose whatever progress you had in the Boss Rush sequence.
+
+- Also note that during Boss Rush, for bosses with Stakes of Marika, the option to respawn at the last Site of Grace will not work as expected, and will spawn you at the same initial warp location near the boss. This is done intentionally to avoid being sent back to the Roundtable and losing progress if you die outside of the Stake's range.
+
+- Miquella's charm effect in the final boss fight of the DLC will now be dispelled automatically if the infinite HP cheat is enabled.
+
+- Fortissax fight will not trigger until you move forward from spawn, just like with Fia's Champions, rather than being on a timer. Due to this change, dying to Fortissax will now respawn you there, rather than back at the Roundtable, if the option is selected.
+
+- Modified the Radagon and Elden Beast event scripts to reduce the chances of the boss fights breaking under certain circumstances.
+
+- Bosses will not need to finish their death dialogue before the warp back to the Roundtable or the next boss happens. This may help prevent some reported instances of getting stuck in the boss arena after the fight.
+
+- Rearranged boss selection menu options.
+
+- Fixed some incorrect miniboss defeat flags (won't matter on a new character, but just in case).
+
+## 2.7.2
+
+- Mod updated for game version 1.15.
+
+## 2.7.1
+
+- Moved the Stake of Marika for Nox Duo next to the fog gate.
+
+- Restored a missing wall near Malenia's fog gate.
+
+- Manual warping from Sealed Tunnel (Onyx Lord - Capital Outskirts location) is now possible.
+
+## 2.7
+
+- Almost every boss now allows respawning near them after dying. Huge thanks to Gabe12345 on the ?ServerName? Discord for helping me figure out what I was doing wrong before that didn't work for many locations. The only exception is Fortissax, to avoid getting stuck in the area as you're instantly warped into the fight.
+
+- Added an option to the boss selection menu where you can choose the behavior of respawns after death, for bosses without Stakes of Marika. By default, you will respawn before the boss when possible, but you can set it to always respawn you at the Roundtable Hold instead. This essentially acts like the Stake of Marika respawn options, except you choose in advance instead of after you die.
+
+- The Stake of Marika option to go back to the last Site of Grace should now correctly take you back to the Roundtable Hold in all cases, if no other Grace has been used in between. Previously in some cases, both options would spawn you near the boss - one at the regular Stake spawn point, and the other at the custom Boss Arena spawn point.
+
+- Moved the Stake of Marika respawn location for multiple bosses next to their fog gates.
+
+- Removed the Stake of Marika effect for Demi-Human Queen Maggie since the respawn point is significantly further away than the custom spawn point. Moving it was not practical as it's in a different map segment.
+
+- Removed the Stake of Marika effect for Metyr as it's useless without having done Ymir's quest.
+
+- Bosses will now have "first encounter" behavior the first time you fight them, including playing their cutscene. Radagon is the only exception, due to how the fight is set up.
+
+- This also fixes a funny bug where Miquella's arm in the cocoon would appear both in the raised and lowered position at the same time, due to Mohg's intro cutscene never playing. Same for the doors to Rennala's boss room staying closed with the fog gate overlaid on top.
+
+- Added an option to the boss selection menu to reset the "first encounter" flags for all bosses where it makes a meaningful difference.
+
+- Removed forced time of day switch to night for Death Rite Birds in Mountaintops and Charo's Hidden Grave, as they don't require it to spawn.
+
+- Various warp point adjustments.
+
+- Minor menu navigation improvements.
+
+## 2.6.3
+
+- Fixed Jar-Bairn's HP/FP/stamina cheats not applying in multiple maps.
+
+- The character initialization script now also runs the first time the Roundtable Hold is visited, if it hasn't already run previously. This means you will still get items such as Whetblades and Crystal Tears even if the character was created outside the mod. However, starting a new character with the mod installed is still the recommended method to avoid possible bugs.
+
+- Due to the previous change, the one-time check that attempts to verify if the character was created and used outside of the mod has also been modified. Now it checks if any remembrance "boss defeated" flags are on, as those bosses have the highest potential to cause bugs if defeated outside the mod.
+
+- Added a new one-time check to verify if key items awarded automatically by Boss Arena are held by the player, and show a warning if not. This will help spot edge cases where a character was created using an outdated version of the mod and did not receive any items.
+
+- Fixed menu placement for Knight of the Solitary Gaol when sorting the boss list by name.
+
+## 2.6.2
+
+- Updated mod for version 1.14 of Elden Ring.
+
+- Moved the DLC Items category in Kale's shop to the top of the list to make it more visible.
+
+- Made all characters at the Roundtable Hold invincible to prevent unexpected situations (like aggroing from rolling into them with the Briar Set).
+
+- Minor text changes.
+
+## 2.6.1
+
+- Added French translation (credit to KaruMiraiii)
+
+- Changed Gideon's NPC ID at the Roundtable Hold to the correct one to hopefully prevent instances of him dying to spirit summons in Seamless Co-Op. It also fixes the missing NPC name when talking to him.
+
+## 2.6
+
+- Added new entries to Kale's shop containing fully upgraded weapons and spirit ashes.
+
+- Minor text changes.
+
+## 2.5.2
+
+- Added extra failsafes to prevent warp loop with Seamless Co-Op.
+
+## 2.5.1
+
+- Added a mechanism that attempts to detect if the mod has not been started with a fresh character and shows a warning to the player.
+
+- Fixed warp loop issue with Seamless Co-Op guests.
+
+## 2.5
+
+- (DLC version only) Fixed NG+ multipliers for enemy attack power incorrectly applying in NG when using the "Restore Scadutree Blessing mechanics" modifier.
+
+- Replaced Astel's model at the Roundtable with Gideon's so that I could move the boss selection NPC closer to everything else and make it more fluid to move between facilities. The reduction in creepiness factor is just a bonus (even if it does make the mod lose some personality).
+
+- (DLC version only) Fixed Dryleaf Dane not respawning under certain conditions and fixed the event that automatically gives you the required gesture.
+
+- Added a 10% attack power buff for physical and elemental damage to Mohg's Great Rune, to make it actually worth using in PvE.
+
+- Similarly, modified Rykard's Great Rune to boost runes received by 25%, as the original effect is basically useless against bosses.
+
+- Randomized Gideon's moveset so that he gets a different one every time you fight him. Normally his moveset is based on which optional bosses you have defeated, but since those flags are never set in Boss Arena, he would always use his default moveset.
+
+- (DLC version only) The "Restore Scadutree Blessing mechanics" modifier now also adds the respective submenu to the Roundtable Site of Grace. The \script folder needs to be copied along with the regulation.bin in order to apply this change.
+
+- Time of day now only changes to night when a night-only boss has been selected, and not just when entering their areas. This adds more variance to the time of day in the overworld and eliminates some jarring transitions that could occur.
+
+- Adjusted warp points for some bosses.
+
+- Modified boss selection menu code so the selector always returns to the first position between submenus.
+
+- Adjusted the indicated level for multiple bosses to better reflect the intended progression.
+
+- Ajusted (mostly increased) the amount of runes awarded by multiple bosses to better fit their difficulty and/or expected progression.
+
+- Removed the Ragged Set from Kale's shop as cut items are outside the scope of this mod and would probably get you banned if you accidentally load the Boss Arena character while online (it was repurposed as Igon's Set anyway).
+
+- Fixed various instances of vanilla text that still reflected an older version of the game.
+
+## 2.4
+
+- Added Crucible Knight Devonia to DLC Minor Bosses. This doesn't exactly qualify as a proper boss according to my own rule (named HP bar), but it was requested and ended up being fairly simple to implement, so might as well.
+
+- Added an option to the boss selection menu to immediately re-select the last boss that was fought. This makes it quicker to fight bosses again when there is no nearby respawn point. Thanks to user Dudenoso for suggesting this feature.
+
+- Fixed Romina not respawning under certain conditions.
+
+- Fixed Red Bear warp point, again (they did something weird with all the Rauh maps in the previous patch).
+
+- Fixed Grafted Scion fog gate not being usable if the boss had not been defeated before.
+
+- Disabled the Walking Mausoleum near Death Rite Bird (Snowfield) so it doesn't nuke you with magic while fighting the boss.
+
+- Adjusted some warp points. 
+
+- Rearranged boss selection menu options.
+
+- Made various changes to event flag handling to make it less likely for bosses to fail respawning when using characters that were used in the vanilla game (but you should still avoid doing this).
+
+## 2.3
+
+- Updated mod for regulation 1.13.2.
+
+- Fixed warp point for Death Rite Bird (Mountaintops) and mix-up between the two Night's Cavalry in Liurnia.
+
+- Fixed Tibia Mariner (Altus) not respawning.
+
+- Adjusted various overworld warp points to make it more obvious where the boss is.
+
+- Armor alteration now costs 0 runes.
+
+- Minor text changes.
+
+## 2.2.2
+
+- Fixed broken Radagon and Elden Beast fights.
+
+- Fixed Cave Bosses category not working when sorting was set to "Sort by level".
+
+- Fixed Cleanrot Knight x2 warp.
+
+- (Legacy version only) Removed DLC options from the Random menu which were accidentally included in a previous update.
+
+- (DLC version only) Made Scadutree Fragments and Revered Spirit Ash have no effect by default, as the mod is designed without their buffs in mind. You can still restore the original mechanics (and enemy stats) by using the included optional modifier "Restore Scadutree Blessing mechanics". This change makes it so that you can switch from the modifier to the default version without the game becoming unbalanced due to your high Scadutree levels, which previously required creating a new character to fix.
+
+- Removed duplicate Sun Realm Shield from Kale's shop.
+
+- Minor text changes.
+
+## 2.2.1
+
+- (DLC version only) Fixed warp points for Romina, Red Bear, Black Knight Garrew and Divine Beast Dancing Lion (Rauh).
+
+- Moved warp location for Grafted Scion boss to make the fight repeatable.
+
+- (DLC version only) Adjusted multiple DLC boss warp points to have the nearby Site of Grace in view when spawning. Since dying to most DLC bosses respawns you back at the Roundtable otherwise, it's highly recommended to activate/rest at these graces when available to respawn there instead.
+
+- (DLC version only) Adjusted warp points for multiple DLC bosses in order to spawn outside aggro range.
+
+- (DLC version only) Fixed an oversight where the additional NG+ scaling for DLC bosses after completion of the DLC was not applying. I combined its multipliers into the per-area DLC NG+ scaling (which does apply properly) as a workaround for this. This change is only relevant if you are using the "Restore Scadutree Blessing mechanics" optional modifier, as by default the mod removes this additional NG+ multiplier anyway, since it's meant to compensate for fighting early DLC bosses at high Scadutree levels.
+
+- Fixed a bug where the character initialization script would run again when reloading a save in the Chapel of Anticipation.
+
+- Added Regalia of Eochaid to Kale's shop.
+
+- (DLC version only) Updated Lamenter's event script with the latest game version changes.
+
+## 2.2
+
+- Updated the mod to work with version 1.13 of Elden Ring.
+
+- (DLC version only) Added Count Ymir, Mother of Fingers to the boss list.
+
+- Fixed selection for Bloodhound Knight Darriwil and Putrid Avatar (Snowfield) not working properly.
+
+- Fixed warp point for Night's Cavalry x2, which previously spawned the player stuck in the ground.
+
+- Fixed menu navigation bug in boss sorting options menu. The menu now also shows which sorting method is currently active.
+
+- Moved spawn point for Tree Sentinel (Limgrave) closer to the boss.
+
+- (DLC version only) Igon's Furled Finger is now given automatically to the player after character creation. It's also still available at Kale's shop like before.
+
+## 2.1.3
+
+- Fixed Erdtree Burial Watchdog (Weeping Peninsula) boss selection.
+
+- Fixed boss selection mix-up for Godefroy and Vyke.
+
+- (Legacy version only) Fixed "Random (All bosses" option which was also enabling DLC boss flags.
+
+- Fixed some chest armor pieces showing up in the leg armor tab.
+
+- Moved spawn point for Demi-Human Chiefs closer to the fog gate and removed nearby enemies.
+
+- Removed the Ash of War duplication option from Hewg's shop as it's not working properly. This can be fixed, but since you can buy multiple copies of an Ash of War at Kale's anyway, there's not much point.
+
+## 2.1.2
+
+- Fixed many random parameters that were still at their game version 1.10 values. Before this fix, the mod was basically missing the whole last balancing pass from FromSoft (whoops).
+
+- Changed the optional modifiers setup to be easier to use.
+
+- Minor text fixes.
+
+## 2.1.1
+
+- Fixed broken Cave Bosses list.
+
+- Adjusted the indicated level for some bosses to better reflect their actual difficulty.
+
+## 2.1
+
+- General rebalance of NG+ enemy stats. Increased NG+ HP and damage multipliers for enemies so that NG+1 remains at a more comparable level of difficulty to NG throughout the game, when considering the player's expected power level at each stage. Earlier bosses get the largest buffs, which decrease as you progress through the tiers. The higher scaling tiers (and the DLC by extension) are unchanged from vanilla as it's unnecessary to make them harder (also need to leave some margin for the higher game-wide NG+ multipliers in later game cycles, to avoid them being too overtuned).
+
+- Removed the bosses' attack multiplier for Standard damage type in all NG+ cycles. The vanilla game applies a multiplier on both physical *and* standard damage, despite standard being a subset of physical, while slash/thrust/strike have no multiplier. This effectively means that standard type damage from enemies is multiplied twice in NG+ cycles, which I have to assume is an oversight that was never fixed.
+
+- Increased rune rewards for all bosses that got buffed in NG+ cycles, roughly proportional to their HP increase, and also increased all base rune rewards by 15% to compensate for the fact that you only fight bosses with this mod. This is meaningless in the current version of the mod (unless you use the modifier to restore level up costs) but it will be relevant in an upcoming mode that will focus on progression.
+
+- Added the Black Knife Assassin outside Sainted Hero's Grave as an Overworld Boss. Hopefully *now* every base game boss is included, but no guarantees I'm not still missing some random thing somewhere.
+
+- Enabled use of Torrent against Elden Beast, in line with the vanilla game.
+
+- Added a "Random" submenu to the boss selection menu with various categories to select a random boss from.
+
+- Added two sorting options to the boss selection menu:
+
+- By default, bosses are now ordered by ascending level within each category, and then alphabetically within each level. This level is mostly based on their internal scaling tier, with some manual adjustment where it makes sense (DLC NPC tiers are still weird, like Rakshasa having a higher tier than Bayle, I'll probably adjust this in the future). Said level has been added to the boss names in the selection menu as well, regardless of the sorting method selected.
+
+- The other option is to sort alphabetically first, and then by  ascending level for enemies with the same base name.
+
+- Known issue: the sorting options menu is currently a bit buggy in the way it interacts with the Leave option or the cancel button, so it takes two attempts to exit the menu completely after selecting an option there (or alternatively, just walk away).
+
+- Combined the Gods, Demigods and Legends categories into a single "Remembrance Bosses" one. Also combined the Tunnel and Ruins categories in Minor Bosses.
+
+- Modified boss selection menu code so the default selection for submenus starts closer to the top. I haven't figured out yet how to make the cursor always default to the first option, but this should be significantly better for now (no more defaulting to some random boss in the middle of the list).
+
+- Added a warning to the NG+ menu as the first entry, to prevent accidentally triggering the next game cycle.
+
+- Added support for all languages that the game supports, so that custom text strings now appear instead of showing ?EventTextForTalk? when the game is set to languages other than English. They will still be in English, but at least they display.
+
+- Known issue: when the game is set to non-Latin alphabet languages, the font used for Latin characters is larger and causes some longer text strings to get cut off. The only way to get around this is by switching the game to English on Steam.
+
+- Removed some walls that were placed to keep players from exploring outside the intended scope of the mod. While doing so is still discouraged due to the potential of bugs, this allows access to some Sites of Grace which can be used to respawn closer to bosses, when other nearby respawn locations are unavailable or not working properly.
+
+- Dying to the final boss of the DLC will now respawn you at the nearby Site of Grace. Unfortunately the same method will not work for most DLC bosses, so you need to either activate the grace manually to respawn there or select the boss again at the Roundtable.
+
+- Rearranged Kale's shop menu options to remove unnecessary menu nesting.
+
+- Various internal changes to make the mod a tiny bit friendlier to use together with other mods (it still requires to know what you're doing and may not be possible in many cases, this is really just changing event flag ranges and SpEffect IDs so they're less likely to cause conflicts).
+
+## 2.0.3
+
+- (DLC version only) Added Ghostflame Dragon (Gravesite Plain) back to the boss list.
+
+## 2.0.2
+
+- (DLC version only) Fixed warp location for Dancer of Ranah.
+
+- (DLC version only) Removed Ghostflame Dragon (Gravesite Plains) while I figure out what's causing the warp to spawn the player off bounds.
+
+## 2.0.1
+
+- (DLC version only) Fixed wrong respawn location for Putrescent Knight.
+
+## 2.0
+
+- (DLC version only) Added most of the DLC bosses, 40 out of 42 in total. The only ones still missing are Ymir and Needle Knight Leda, as I haven't been able to figure out how to set/reset the flag triggers for their fights due to the complexity in their event scripts. If I ever figure out how to implement them in the future, I will, but I wouldn't count on it given the complexity involved (Leda's in particular works under completely different mechanics as it's not a "real" boss, but rather an NPC invasion sequence).
+
+- (DLC version only) Removed the need for Shadow Tree Blessings by reducing the bloated stat multipliers on DLC bosses to be more in line with the late base game. An alternative regulation.bin file is offered to restore the vanilla stats while also adding Scadutree Fragments and Revered Spirit Ashes to Kale's shop. Check out the sticky on the Posts tab on Nexus if you want more detailed information on these changes.
+
+- Added the Misbegotten Warrior + Crucible Knight boss fight at Redmane Castle, which was missing from the original mod. I don't think there's any bosses left to implement from the base game, but let me know if anything is missing (remember only bosses with a big named HP bar at the bottom are within the scope of this mod).
+
+- Removed the changes that enabled summoning Spirit Ashes anywhere, as it was causing some unintended behaviors. The vast majority of boss arenas allow summoning anyway, so that modification was not really necessary.
+
+- (DLC version only) Fixed Rakshasa and Verdigris armor sets not showing up in Kale's shop (thanks to CallMeLolo and DustyFukuyama for reporting these).
+
+- (DLC version only) Fixed DLC arrows at Kale's shop.
+
+- Added all base game altered armor pieces directly to Kale's shop. You can still manually perform alterations at a Site of Grace.
+
+- Upgrading weapons and Spirit Ashes now costs 0 runes. This basically makes Jar-Bairn's option to give you runes pointless as everything is free, but I'm leaving it in just in case.
+
+- More shop inventory cleanup.
+
+## 1.6
+
+- The mod now has 2 variants, a DLC version with support for DLC content, and a legacy version for players who do not own the DLC. This is done to ensure there are no issues when receiving DLC-only items for the latter players, as I have no easy way of testing that behavior.
+
+- (DLC only)  Added all meaningful DLC items to Kale's shop. They can all be found in a separate "DLC Items" category. If you notice anything missing, please let me know.
+
+- (DLC only) All DLC cookbooks and map fragments are now awarded automatically when starting a new character. For existing characters, you can still buy these at Kale's shop.
+
+- Note that Scadutree Fragments and Revered Spirit Ash have not been added, as they will most likely be useless with this mod since they cannot normally be used outside a DLC site of grace. I'm still looking into how to handle this aspect for when DLC bosses are implemented, but I'm leaning towards scrapping the mechanic entirely and just using the regular enemy scaling.
+
+- Decluttered Kale's shop by removing many items which have no actual use with the mod (such as most key items or multiplayer items) or are redundant (such as remembrances or most rune consumables).
+
+- Re-categorized some items in Kale's shop to better suit their actual nature. For example, infinite use items and special upgrade items like Golden Seeds or Memory Stones are now in Tools/Misc rather than Consumables, leaving the latter for items that better fit that definition.
+
+- Minor text changes.
+
+## 1.5
+
+- General overhaul to support the post-DLC version 1.12 of Elden Ring. DLC bosses and items are not included yet, but I hope to add them over the next few weeks.
+
+- Removed level scaling options, as the system was very buggy and was causing unintended side effects (such as changing your stats in abnormal ways when you equipped certain pieces of equipment). I recommend using the tools that the mod already provides to customize your difficulty, such as being able to level up and upgrade weapons freely, as well as increasing the NG+ cycle by interacing with Morgott.
+I also plan to include a rebalanced NG+ mode as an optional regulation.bin in the near future, that will attempt to equalize difficulty across bosses in NG+ cycles (as the vanilla balancing still has early bosses being fairly weak for an NG endgame character, even in NG+7). The idea is to make it unnecessary to intentionally nerf yourself in order to still have a reasonable challenge against the earlier bosses in NG+ cycles, as is the case now.
+
+- Fixed the infinite HP/FP/stamina effects not applying in many areas of the game.
+
+- Added the Pumpkin Head duo in Caelem Ruins as a Ruins Boss. With this, every single boss in the base game should be included now.
+
+- Modified the player's spawn location for some overworld bosses, in order to spawn closer to the boss.
+
+- Modified the warp destination to the Roundtable Hold after defeating a boss, to spawn next to the Malformed Star rather than near the grace. This makes fighting multiple bosses in succession more fluid.
+
+- Fixed Nox Flowing Sword appearing in the wrong weapon category.
+
+- Various minor text changes.
+
+- Added an alternative regulation.bin as an option to disable free level-ups, for players who want to keep a sense of progression when using this mod.
