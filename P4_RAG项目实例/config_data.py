@@ -18,3 +18,6 @@ similarity_threshold = 1        # 检索返回匹配的文档数量
 
 embeddings_model_name = "text-embedding-v4"
 chat_model_name = "qwen3-max-2026-01-23"
+
+# chat history
+history_path = "./chat_history"
