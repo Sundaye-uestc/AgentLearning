@@ -21,3 +21,9 @@ chat_model_name = "qwen3-max-2026-01-23"
 
 # chat history
 history_path = "./chat_history"
+
+session_config = {
+        "configurable": {
+            "session_id": "user_001",
+        }
+    }
