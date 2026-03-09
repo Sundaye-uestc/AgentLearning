@@ -1,17 +1,15 @@
 """
 知识库
 """
-import os
-
-from sqlalchemy.testing.suite.test_reflection import metadata
-
-import config_data as config
 import hashlib
+import os
+from datetime import datetime
+
 from langchain_chroma import Chroma
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from datetime import datetime
 
+import config_data as config
 
 
 def check_md5(source: str):
@@ -69,7 +67,7 @@ class KnowledgeBaseService(object):
         )
 
 
-    def uploader_by_str(self, data: str, filename):
+    def upload_by_str(self, data: str, filename):
         """将传入的字符串，进行向量化，存入向量数据库中"""
         # 先得到传入字符串的md5值
         md5_hex = get_string_md5(data)
@@ -101,5 +99,5 @@ class KnowledgeBaseService(object):
 
 if __name__ == '__main__':
     service = KnowledgeBaseService()
-    r = service.uploader_by_str("蔡依林", "testfile")
+    r = service.upload_by_str("蔡依林", "testfile")
     print(r)
