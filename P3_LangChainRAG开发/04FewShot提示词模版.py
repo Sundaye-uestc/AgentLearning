@@ -1,5 +1,5 @@
-from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate
 from langchain_community.llms.tongyi import Tongyi
+from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate
 
 # 示例的模版
 example_template = PromptTemplate.from_template("单词：{word}，反义词：{antonym}")

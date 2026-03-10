@@ -1,4 +1,3 @@
-import jq
 from langchain_community.document_loaders import JSONLoader
 
 loader = JSONLoader(

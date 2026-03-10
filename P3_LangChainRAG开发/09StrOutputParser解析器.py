@@ -1,5 +1,5 @@
-from langchain_core.output_parsers import StrOutputParser
 from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 
 model = ChatTongyi(model="qwen3-max-2026-01-23")

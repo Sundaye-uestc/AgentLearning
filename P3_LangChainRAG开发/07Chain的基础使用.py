@@ -1,5 +1,5 @@
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_models.tongyi import ChatTongyi
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 chat_prompt_template = ChatPromptTemplate.from_messages(
     [

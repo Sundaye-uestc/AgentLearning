@@ -7,6 +7,7 @@ from langchain_core.messages import message_to_dict, messages_from_dict, BaseMes
 
 import config_data as config
 
+
 def get_history(session_id):
     return FileChatMessageHistory(session_id, config.history_path)
 

@@ -1,6 +1,3 @@
-from onnxruntime.tools.offline_tuning import embed
-from openai import embeddings
-
 md5_path = "./md5.text"
 
 # Chroma

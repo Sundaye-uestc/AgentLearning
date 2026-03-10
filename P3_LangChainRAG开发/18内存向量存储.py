@@ -1,6 +1,6 @@
-from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.document_loaders import CSVLoader
+from langchain_community.embeddings import DashScopeEmbeddings
+from langchain_core.vectorstores import InMemoryVectorStore
 
 vector_store = InMemoryVectorStore(
     embedding=DashScopeEmbeddings()

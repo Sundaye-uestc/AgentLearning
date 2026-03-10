@@ -1,4 +1,3 @@
-from httpcore import stream
 from langchain_community.llms.tongyi import Tongyi
 
 # qwen-max是大语言模型

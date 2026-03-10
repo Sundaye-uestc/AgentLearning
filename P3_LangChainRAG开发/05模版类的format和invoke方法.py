@@ -1,4 +1,4 @@
-from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate, ChatPromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 template = PromptTemplate.from_template("我的邻居是：{lastname}")
 res = template.format(lastname="张大明", hobby="钓鱼")

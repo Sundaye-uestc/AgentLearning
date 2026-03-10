@@ -1,9 +1,10 @@
-import os, json
+import json
+import os
 from typing import Sequence
 
 from langchain_community.chat_models import ChatTongyi
+from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.messages import message_to_dict, messages_from_dict, BaseMessage
-from langchain_core.chat_history import BaseChatMessageHistory, InMemoryChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables import RunnableWithMessageHistory

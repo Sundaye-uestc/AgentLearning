@@ -1,6 +1,5 @@
 from langchain_chroma import Chroma
 from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_community.document_loaders import CSVLoader
 
 # Chroma向量数据库（轻量级）
 vector_store = Chroma(

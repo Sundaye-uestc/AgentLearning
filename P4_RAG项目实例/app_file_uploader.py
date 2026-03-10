@@ -4,9 +4,11 @@
 当WEB页面元素发生变化，则整个程序代码重新执行一遍
 """
 
-import streamlit as st
-from knowledge_base import KnowledgeBaseService
 import time
+
+import streamlit as st
+
+from knowledge_base import KnowledgeBaseService
 
 # 添加网页标题
 st.title("知识库更新服务")

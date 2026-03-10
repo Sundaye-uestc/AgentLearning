@@ -2,10 +2,10 @@
 提示词： 用户的提问 + 向量库中检索到的参考资料
 """
 from langchain_community.chat_models import ChatTongyi
-from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.vectorstores import InMemoryVectorStore
 
 model = ChatTongyi(model="qwen3-max-2026-01-23")
 prompt = ChatPromptTemplate.from_messages(
