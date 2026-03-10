@@ -23,22 +23,22 @@ def get_weather(city: str) -> str:
 @before_agent
 def log_before_agent(state: AgentState, runtime: Runtime) -> None:
     # agent执行前会调用这个函数并传入state和runtime两个对象
-    print(f"[before agent]agent启动，并附带{len(state['message'])}消息")
+    print(f"[before agent]agent启动，并附带{len(state['messages'])}消息")
 
 @after_agent
 def log_after_agent(state: AgentState, runtime: Runtime) -> None:
     # agent执行后会调用该函数并传入state和runtime
-    print(f"[after agent]agent结束，并附带{len(state['message'])}消息")
+    print(f"[after agent]agent结束，并附带{len(state['messages'])}消息")
 
 @before_model
 def log_before_model(state: AgentState, runtime: Runtime) -> None:
     # model执行前会调用该函数并传入state和runtime
-    print(f"[before model]model即将调用，并附带{len(state['message'])}消息")
+    print(f"[before model]model即将调用，并附带{len(state['messages'])}消息")
 
 @after_model
 def log_after_model(state: AgentState, runtime: Runtime) -> None:
     # model执行后会调用该函数并传入state和runtime
-    print(f"[after model]model调用结束，并附带{len(state['message'])}消息")
+    print(f"[after model]model调用结束，并附带{len(state['messages'])}消息")
 
 @wrap_model_call
 def model_call_hook(request, handler):
@@ -58,5 +58,5 @@ agent = create_agent(
     middleware=[log_before_agent,log_after_agent,log_before_model,log_after_model,model_call_hook,monitor_tool],
 )
 
-res = agent.invoke({"messages": [{"role": "user", "content": "今天天气如何，如何穿衣？"}]})
+res = agent.invoke({"messages": [{"role": "user", "content": "成都今天天气如何，如何穿衣？"}]})
 print("*********\n", res)
