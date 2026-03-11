@@ -2,10 +2,10 @@ import logging
 import os
 from datetime import datetime
 
-from Agent项目.utils.path_tool import get_abs_path
 
 # 日志保存的根目录
-LOG_ROOT = get_abs_path("logs")
+project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
+LOG_ROOT = project_root_path + "log"
 
 # 确保日志的目录存在
 os.makedirs(LOG_ROOT, exist_ok=True)

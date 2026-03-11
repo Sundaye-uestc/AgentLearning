@@ -28,3 +28,4 @@ def get_abs_path(relative_path: str) -> str:
 
 if __name__ == '__main__':
     print(get_abs_path(__file__))
+    print(get_project_root())

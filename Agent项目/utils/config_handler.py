@@ -9,7 +9,7 @@ import yaml
 from Agent项目.utils.path_tool import get_abs_path
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+target = "/".join([project_root_path, "config/rag.yaml"])
 def load_rag_config(config_path: str=get_abs_path(project_root_path+"/config/rag.yaml"), encoding: str="utf-8"):
     with open(config_path, "r", encoding=encoding) as f:
         return yaml.load(f, Loader=yaml.FullLoader)
