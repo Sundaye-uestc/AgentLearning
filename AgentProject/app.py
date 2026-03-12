@@ -1,6 +1,7 @@
 # 第一步：先配置 Python 模块搜索路径
 import sys
 import os
+import time
 
 # 获取 app.py 所在的目录（即 AgentProject 根目录）
 project_root = os.path.dirname(os.path.abspath(__file__))
@@ -38,8 +39,11 @@ if prompt:
         def capture(generator, cache_list):
             for chunk in generator:
                 cache_list.append(chunk)
-                yield chunk
+
+                for char in chunk:
+                    time.sleep(0.01)
+                    yield char
 
         st.chat_message("assistant").write_stream(capture(res_stream, response_msgs))
         st.session_state["message"].append({"role": "assistant", "content": response_msgs[-1]})
-
+        st.rerun()

@@ -1,3 +1,11 @@
+# agent/tools/agent_tools.py 完整代码（可单独运行）
+import sys
+import os
+# 路径适配：二级子目录，需要 ../../ 回到根目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, "../../"))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 import random
 
 from langchain_core.tools import tool
