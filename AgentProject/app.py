@@ -1,12 +1,19 @@
-# 第一步：先配置 Python 模块搜索路径
+"""
+使用终端在该目录：D:\Projects\AgentLearning\AgentProject下运行：
+streamlit run app.py
+由于路径原因导致各脚本无法单独运行，但可以运行该app.py
+如需运行单独脚本，需要脚本第一行添加如下代码：
+
+# agent/tools/agent_tools.py 完整代码（可单独运行）
 import sys
 import os
+# 路径适配：二级子目录，需要 ../../ 回到根目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, "../../"))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+"""
 import time
-
-# 获取 app.py 所在的目录（即 AgentProject 根目录）
-project_root = os.path.dirname(os.path.abspath(__file__))
-# 将根目录插入到 sys.path 最前面（最高优先级）
-sys.path.insert(0, project_root)
 
 import streamlit as st
 
