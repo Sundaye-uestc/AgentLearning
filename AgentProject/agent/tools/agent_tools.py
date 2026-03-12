@@ -1,12 +1,11 @@
-import os
 import random
 
 from langchain_core.tools import tool
 
-from AgentProject.rag.rag_service import RagSummarizeService
-from AgentProject.utils.config_handler import agent_conf
-from AgentProject.utils.logger_handler import logger
-from AgentProject.utils.path_tool import get_abs_path
+from rag.rag_service import RagSummarizeService
+from utils.config_handler import agent_conf
+from utils.logger_handler import logger
+from utils.path_tool import get_abs_path
 
 rag = RagSummarizeService()
 external_data = {}
@@ -88,5 +87,5 @@ def fill_context_for_report():
     return "fill_context_for_report已调用"
 
 
-# if __name__ == '__main__':
-#     print(fetch_external_data("1001", "2025-01"))
+if __name__ == '__main__':
+    print(fetch_external_data("1001", "2025-01"))

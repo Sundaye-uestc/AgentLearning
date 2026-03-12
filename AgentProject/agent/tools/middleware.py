@@ -7,8 +7,8 @@ from langchain_core.messages import ToolMessage
 from langgraph.runtime import Runtime
 from langgraph.types import Command
 
-from AgentProject.utils.logger_handler import logger
-from AgentProject.utils.prompt_loader import load_report_prompts, load_system_prompts
+from utils.logger_handler import logger
+from utils.prompt_loader import load_report_prompts, load_system_prompts
 
 
 @wrap_tool_call

@@ -1,3 +1,12 @@
+# 第一步：先配置 Python 模块搜索路径
+import sys
+import os
+
+# 获取 app.py 所在的目录（即 AgentProject 根目录）
+project_root = os.path.dirname(os.path.abspath(__file__))
+# 将根目录插入到 sys.path 最前面（最高优先级）
+sys.path.insert(0, project_root)
+
 import streamlit as st
 
 from agent.react_agent import ReactAgent

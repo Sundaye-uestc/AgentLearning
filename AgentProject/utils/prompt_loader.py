@@ -1,7 +1,7 @@
 import os
 import logger
 
-from AgentProject.utils.config_handler import prompts_conf
+from .config_handler import prompts_conf
 
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

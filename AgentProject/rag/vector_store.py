@@ -4,10 +4,10 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from AgentProject.model.factory import embedding_model
-from AgentProject.utils.config_handler import chroma_conf
-from AgentProject.utils.file_handler import pdf_loader, txt_loader, listdir_with_allowed_type, get_file_md5_hex
-from AgentProject.utils.logger_handler import logger
+from model.factory import embedding_model
+from utils.config_handler import chroma_conf
+from utils.file_handler import pdf_loader, txt_loader, listdir_with_allowed_type, get_file_md5_hex
+from utils.logger_handler import logger
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 
