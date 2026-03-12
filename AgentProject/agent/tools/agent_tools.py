@@ -3,10 +3,10 @@ import random
 
 from langchain_core.tools import tool
 
-from Agent项目.rag.rag_service import RagSummarizeService
-from Agent项目.utils.config_handler import agent_conf
-from Agent项目.utils.logger_handler import logger
-from Agent项目.utils.path_tool import get_abs_path
+from AgentProject.rag.rag_service import RagSummarizeService
+from AgentProject.utils.config_handler import agent_conf
+from AgentProject.utils.logger_handler import logger
+from AgentProject.utils.path_tool import get_abs_path
 
 rag = RagSummarizeService()
 external_data = {}

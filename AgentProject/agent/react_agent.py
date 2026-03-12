@@ -1,8 +1,8 @@
 from langchain.agents import create_agent
 
-from Agent项目.agent.tools.agent_tools import *
-from Agent项目.agent.tools.middleware import *
-from Agent项目.model.factory import chat_model
+from AgentProject.agent.tools.agent_tools import *
+from AgentProject.agent.tools.middleware import *
+from AgentProject.model.factory import chat_model
 
 
 class ReactAgent:

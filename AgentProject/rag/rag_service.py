@@ -5,9 +5,9 @@ from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 
-from Agent项目.model.factory import chat_model
-from Agent项目.rag.vector_store import VectorStoreService
-from Agent项目.utils.prompt_loader import load_rag_prompts
+from AgentProject.model.factory import chat_model
+from AgentProject.rag.vector_store import VectorStoreService
+from AgentProject.utils.prompt_loader import load_rag_prompts
 
 
 def print_prompt(prompt):

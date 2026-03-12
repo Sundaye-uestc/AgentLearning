@@ -6,7 +6,7 @@ import os
 
 import yaml
 
-from Agent项目.utils.path_tool import get_abs_path
+from AgentProject.utils.path_tool import get_abs_path
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 target = "/".join([project_root_path, "config/rag.yaml"])
