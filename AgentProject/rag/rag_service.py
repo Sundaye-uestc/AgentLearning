@@ -1,6 +1,7 @@
 """
 总结服务类：用户提问，搜索参考资料，将提问和参考资料提交给模型，让模型总结回复
 """
+import os
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -43,7 +44,9 @@ class RagSummarizeService(object):
         counter = 0
         for doc in context_docs:
             counter += 1
-            context += f"【参考资料{counter}】：参考资料：{doc.page_content} | 参考元数据：{doc.metadata}\n"
+            source = doc.metadata.get("source", "")
+            source_name = os.path.basename(source) if source else "未知来源"
+            context += f"【参考资料{counter}】（来源：《{source_name}》）：{doc.page_content}\n"
 
         return self.chain.invoke(
             {

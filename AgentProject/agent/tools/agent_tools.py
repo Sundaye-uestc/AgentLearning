@@ -16,9 +16,30 @@ from utils.path_tool import get_abs_path
 rag = RagSummarizeService()
 external_data = {}
 
+
+def _get_source_names(query: str) -> str:
+    """从检索结果中提取知识库来源文件名，拼接为来源标注。"""
+    try:
+        docs = rag.retriever_docs(query)
+        sources = []
+        seen = set()
+        for doc in docs:
+            source = doc.metadata.get("source", "")
+            name = os.path.basename(source)
+            if name and name not in seen:
+                seen.add(name)
+                sources.append(name)
+        if sources:
+            return "\n\n📚 参考来源：" + "、".join(sources)
+    except Exception:
+        pass
+    return ""
+
+
 @tool(description="从向量存储库中检索参考资料")
 def rag_summarize(query: str) -> str:
-    return rag.rag_summarize(query)
+    summary = rag.rag_summarize(query)
+    return summary + _get_source_names(query)
 
 @tool(description="获取城市天气，以消息字符串形式返回")
 def get_weather(city: str) -> str:
