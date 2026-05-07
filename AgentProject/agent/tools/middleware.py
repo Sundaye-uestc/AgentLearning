@@ -19,7 +19,7 @@ def monitor_tool(
         handler: Callable[[ToolCallRequest], ToolMessage | Command],
 ) -> ToolMessage | Command:             # 工具执行的监控
     logger.info(f"[tool monitor]执行工具：{request.tool_call['name']}")
-    logger.info(f"[tool monitor]传入参数：{request.tool_call['name']}")
+    logger.info(f"[tool monitor]传入参数：{request.tool_call['args']}")
 
     try:
         result = handler(request)

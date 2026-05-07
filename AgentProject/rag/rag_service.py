@@ -1,12 +1,16 @@
 """
 总结服务类：用户提问，搜索参考资料，将提问和参考资料提交给模型，让模型总结回复
 """
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 
 from model.factory import chat_model
-from .vector_store import VectorStoreService
+from rag.vector_store import VectorStoreService
 from utils.prompt_loader import load_rag_prompts
 
 

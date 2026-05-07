@@ -1,12 +1,10 @@
-# agent/tools/agent_tools.py 完整代码（可单独运行）
 import sys
 import os
-# 路径适配：二级子目录，需要 ../../ 回到根目录
-current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(current_dir, "../../"))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
 import random
+from pathlib import Path
+
+# 将项目根目录加入 sys.path，确保后续所有项目内模块可正常导入
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from langchain_core.tools import tool
 
@@ -38,6 +36,9 @@ def get_user_id() -> str:
 def get_month() -> str:
     return random.choice(["2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12"])
 
+@tool(description="获取用户性别，以str形式返回")
+def get_gender() -> str:
+    return random.choice(["男", "女"])
 
 def generate_external_data():
     """
@@ -96,4 +97,4 @@ def fill_context_for_report():
 
 
 if __name__ == '__main__':
-    print(fetch_external_data("1001", "2025-01"))
+    print(rag.rag_summarize("小户型适合哪些扫地机器人"))

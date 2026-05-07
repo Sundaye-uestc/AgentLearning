@@ -1,7 +1,7 @@
 import os
-import logger
 
 from .config_handler import prompts_conf
+from .logger_handler import logger
 
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

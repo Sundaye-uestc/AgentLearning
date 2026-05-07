@@ -3,10 +3,13 @@ yaml
 k: v
 """
 import os
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import yaml
 
-from .path_tool import get_abs_path
+from utils.path_tool import get_abs_path
 
 
 project_root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

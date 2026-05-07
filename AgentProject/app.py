@@ -1,5 +1,5 @@
 """
-使用终端在该目录：D:\Projects\AgentLearning\AgentProject下运行：
+使用终端在该目录：D:\Work\26.5 科技厅RAG\RagAgent下运行：
 streamlit run app.py
 由于路径原因导致各脚本无法单独运行，但可以运行该app.py
 如需运行单独脚本，需要脚本第一行添加如下代码：
@@ -20,7 +20,7 @@ import streamlit as st
 from agent.react_agent import ReactAgent
 
 # 标题
-st.title("智能机器人智能客服")
+st.title("航空、交通领域边缘侧大模型智能系统")
 st.divider()
 
 if "agent" not in st.session_state:
@@ -40,7 +40,7 @@ if prompt:
     st.session_state["message"].append({"role": "user", "content": prompt})
 
     response_msgs = []
-    with st.spinner("智能客服思考中..."):
+    with st.spinner("思考中..."):
         res_stream = st.session_state["agent"].execute_stream(prompt)
 
         def capture(generator, cache_list):

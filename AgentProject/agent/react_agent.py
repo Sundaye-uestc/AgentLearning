@@ -1,7 +1,11 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from langchain.agents import create_agent
 
-from .tools.agent_tools import *
-from .tools.middleware import *
+from agent.tools.agent_tools import *
+from agent.tools.middleware import *
 from model.factory import chat_model
 
 
@@ -10,7 +14,7 @@ class ReactAgent:
         self.agent = create_agent(
             model=chat_model,
             system_prompt=load_system_prompts(),
-            tools=[rag_summarize,get_weather,get_user_city,get_user_id,get_month,fetch_external_data,fill_context_for_report],
+            tools=[rag_summarize,get_weather,get_user_city,get_user_id,get_month,get_gender,fill_context_for_report],
             middleware=[monitor_tool,log_before_model,report_prompt_switch],
         )
 
