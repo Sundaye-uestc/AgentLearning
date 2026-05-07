@@ -54,5 +54,5 @@ class RagSummarizeService(object):
 
 
 if __name__ == "__main__":
-    rag = RagSummarizeService().rag_summarize("小户型适合哪些扫地机器人")
+    rag = RagSummarizeService().rag_summarize("航空发动机压气机叶片疲劳裂纹的修复方案是什么？")
     print(rag)

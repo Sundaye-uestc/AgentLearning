@@ -1,4 +1,4 @@
-chat_model_name: deepseek-v4-pro
+chat_model_name: deepseek-chat
 chat_api_base: https://api.deepseek.com
 chat_api_key_env: sk-377cb7a13d7b47c8813c6120a0898f0e
 embedding_model_name: text-embedding-v4
