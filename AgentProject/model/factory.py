@@ -39,7 +39,11 @@ class EmbeddingsFactory(BaseModelFactory):
     def generator(self) -> Optional[Embeddings | ChatOpenAI]:
         provider = rag_conf.get("embedding_provider", "dashscope")
         if provider == "dashscope":
-            return DashScopeEmbeddings(model=rag_conf["embedding_model_name"])
+            api_key = _resolve_api_key(rag_conf.get("embedding_api_key_env", ""))
+            kwargs_ds = {"model": rag_conf["embedding_model_name"]}
+            if api_key:
+                kwargs_ds["dashscope_api_key"] = api_key
+            return DashScopeEmbeddings(**kwargs_ds)
         # openai_compatible 分支（智谱等）
         api_key = _resolve_api_key(rag_conf.get("embedding_api_key_env", ""))
         kwargs = {
