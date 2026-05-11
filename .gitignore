@@ -1,5 +1,6 @@
 .venv
 .claude
+.idea
 AgentProject/config/rag.yaml
 AgentProject/log
 AgentProject/md5.text

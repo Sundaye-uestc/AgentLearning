@@ -1,6 +1,0 @@
-chat_model_name: deepseek-chat
-chat_api_base: https://api.deepseek.com
-chat_api_key_env: "填写DeepSeek开放平台的APIKey"
-embedding_model_name: text-embedding-v4
-embedding_provider: dashscope
-embedding_api_key_env: "填写阿里百炼开放平台的APIKey"
